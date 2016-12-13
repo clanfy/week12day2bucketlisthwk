@@ -50,14 +50,23 @@ ListView.prototype = {
     selectCountries.addEventListener('change', function(event){
       var index = this.value;
       var country = countries[index];
-
+      updateDisplay(country);
+      localStorage.setItem("selectedCountry",
+        JSON.stringify(country));
     });
 
   }.bind(this),
 
+  updateDisplay: function(stuff){
+    var tags = document.querySelectorAll('#info p');
+    tags[0].innerText = stuff.name;
+    tags[1].innerText = stuff.latlng[0];
+    tags[2].innerText = stuff.latlng[1];
+  },
+
   render: function(){
     var countryList = document.getElementById('country-list');
-    
+
   },
 
   createItemForCountry: function(country){
