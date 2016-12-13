@@ -7,7 +7,7 @@ window.onload = function() {
   var listView = new ListView();
   var countriesUrl = 'https://restcountries.eu/rest/v1';
 
-listView.makeRequest(countriesUrl, listView.requestComplete);
+  listView.makeRequest(countriesUrl, listView.requestComplete);
 
   // var url = "http://localhost:3000/accounts";
   // var request = new XMLHttpRequest();
@@ -24,7 +24,7 @@ listView.makeRequest(countriesUrl, listView.requestComplete);
   //       listView.render();
   //     };
   //   request.send();
-  };
+};
 
 
 
@@ -32,4 +32,3 @@ listView.makeRequest(countriesUrl, listView.requestComplete);
 
 
 
-  
