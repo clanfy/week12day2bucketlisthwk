@@ -55,6 +55,24 @@ ListView.prototype = {
 
   }.bind(this),
 
+  render: function(){
+    var countryList = document.getElementById('country-list');
+    
+  },
+
+  createItemForCountry: function(country){
+    var countryListItem = document.createElement('li');
+    countryListItem.innerText = country.name;
+    return countryListItem;
+  },
+
+  populateCountryList: function(listElement, countries){
+    for (country of countries){
+      listElement.appendChild(this.createItemForAccount(account));
+    }
+
+  }
+
 
 
 };

@@ -9,6 +9,8 @@ window.onload = function() {
 
   listView.makeRequest(countriesUrl, listView.requestComplete);
 
+  
+
   // var url = "http://localhost:3000/accounts";
   // var request = new XMLHttpRequest();
   // request.open('GET', url);
